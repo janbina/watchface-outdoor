@@ -1,5 +1,8 @@
 import Toybox.Math;
 import Toybox.Time;
+import Toybox.Lang;
+import Toybox.Position;
+import Toybox.System;
 
 class Utils {
 
@@ -21,7 +24,7 @@ class Utils {
         return seconds.toFloat() / Time.Gregorian.SECONDS_PER_DAY * 2 * Math.PI;
     }
 
-    static function timeToSeconds(info as Time.Gregorian.info) {
+    static function timeToSeconds(info as System.ClockTime) {
         return info.hour * Time.Gregorian.SECONDS_PER_HOUR + info.min * Time.Gregorian.SECONDS_PER_MINUTE + info.sec;
     }
 
